@@ -1,0 +1,16 @@
+sudo apt-get -y update;
+sudo apt install -y gcc;
+sudo apt install -y cmake;
+sudo apt-get install -y libx11-dev;
+sudo apt-get install -y libxrandr-dev;
+sudo apt-get install -y libxinerama-dev;
+sudo apt-get install -y libxcursor-dev;
+sudo apt-get install -y libxi-dev;
+sudo apt-get install -y libglfw3 libglfw3-dev;
+sudo apt-get install -y build-essential;
+sudo apt-get -y update;
+cd OpenGL-Cross-Platform/;
+cmake -S . -B ./build/ -G "Unix Makefiles" -D GLFW_BUILD_DOCS=OFF;
+cd ./build/;
+cmake --build .;
+./OpenGL;
